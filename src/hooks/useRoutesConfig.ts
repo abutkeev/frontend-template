@@ -1,6 +1,6 @@
 import React from 'react';
-import MainPage from './MainPage';
-import NotFound from './NotFound';
+import MainPage from '../pages/MainPage';
+import NotFound from '../pages/NotFound';
 
 interface Route {
   readonly pageTitle: string;

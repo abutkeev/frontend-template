@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Typography } from '@mui/material';
 import { FC } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Routes, Route } from 'react-router-dom';
-import useRoutesConfig from '../../pages/useRoutesConfig';
+import useRoutesConfig from '../../hooks/useRoutesConfig';
 
 const PageTitle: FC = () => {
   const routes = useRoutesConfig();

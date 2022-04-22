@@ -6,7 +6,7 @@ import { Paper } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
 import PageTitle from './components/common/PageTitle';
 import useHashFix from './hooks/useHashFix';
-import useRoutesConfig from './pages/useRoutesConfig';
+import useRoutesConfig from './hooks/useRoutesConfig';
 
 function App() {
   useHashFix();
