@@ -22,7 +22,7 @@ const pages: Record<string, Route> = {
   },
 };
 
-const useRoutesConfig = () : Routes => {
+const useRoutesConfig = (): Routes => {
   const routes: Routes = Object.entries(pages).map(([page, { pageTitle, Component }]) => [
     page,
     { pageTitle, Component },

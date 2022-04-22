@@ -14,11 +14,13 @@ const PageLoadingIndicator: FC<Props> = ({ size = 60 }) => {
     }
   }, [openDelayed]);
   return (
-    <Box sx={{ 
-      alignItems: 'center',
-      height: '100%',
-      display: 'flex'
-      }}>
+    <Box
+      sx={{
+        alignItems: 'center',
+        height: '100%',
+        display: 'flex',
+      }}
+    >
       <Collapse in={openDelayed} unmountOnExit>
         <Fade in={openDelayed}>
           <CircularProgress size={size} />
