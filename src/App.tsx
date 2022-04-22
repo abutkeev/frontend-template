@@ -5,9 +5,12 @@ import '@fontsource/roboto/700.css';
 import { Paper } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
 import PageTitle from './components/common/PageTitle';
+import useHashFix from './hooks/useHashFix';
 import routes from './routes';
 
 function App() {
+  useHashFix();
+
   return (
     <>
       <PageTitle />
