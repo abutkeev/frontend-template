@@ -7,7 +7,7 @@ import useRoutesConfig from '../../hooks/useRoutesConfig';
 const PageTitle: FC = () => {
   const routes = useRoutesConfig();
   return (
-    <div>
+    <>
       <AppBar>
         <Toolbar>
           <Routes>
@@ -29,7 +29,7 @@ const PageTitle: FC = () => {
         </Toolbar>
       </AppBar>
       <Toolbar />
-    </div>
+    </>
   );
 };
 export default PageTitle;

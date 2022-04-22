@@ -21,7 +21,7 @@ function App() {
           p: 1,
           maxWidth: 'md',
           width: { md: '100%' },
-          height: '100vh',
+          height: '100%',
           backgroundColor: '#fafafa',
         }}
       >
