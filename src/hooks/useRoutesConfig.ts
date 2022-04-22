@@ -22,21 +22,22 @@ const pages: Record<string, Route> = {
   },
 };
 
-const routes: Routes = Object.entries(pages).map(([page, { pageTitle, Component }]) => [
-  page,
-  { pageTitle, Component },
-]);
+const useRoutesConfig = () : Routes => {
+  const routes: Routes = Object.entries(pages).map(([page, { pageTitle, Component }]) => [
+    page,
+    { pageTitle, Component },
+  ]);
 
-if (!('/' in pages)) {
-  const pagesArray = Object.entries(pages);
-  const root = pagesArray.find(([, { root }]) => root);
-  const first = pagesArray[0];
-  if (root || first) {
-    const [, { pageTitle, Component }] = root ?? first;
-    routes.push(['/', { pageTitle, Component }]);
+  if (!('/' in pages)) {
+    const pagesArray = Object.entries(pages);
+    const root = pagesArray.find(([, { root }]) => root);
+    const first = pagesArray[0];
+    if (root || first) {
+      const [, { pageTitle, Component }] = root ?? first;
+      routes.push(['/', { pageTitle, Component }]);
+    }
   }
-}
-
-const useRoutesConfig = () => routes;
+  return routes;
+};
 
 export default useRoutesConfig;
