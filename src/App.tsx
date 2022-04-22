@@ -6,11 +6,11 @@ import { Paper } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
 import PageTitle from './components/common/PageTitle';
 import useHashFix from './hooks/useHashFix';
-import routes from './routes';
+import useRoutesConfig from './pages/useRoutesConfig';
 
 function App() {
   useHashFix();
-
+  const routes = useRoutesConfig();
   return (
     <>
       <PageTitle />

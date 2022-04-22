@@ -1,6 +1,6 @@
 import React from 'react';
-import MainPage from './pages/MainPage';
-import NotFound from './pages/NotFound';
+import MainPage from './MainPage';
+import NotFound from './NotFound';
 
 interface Route {
   readonly pageTitle: string;
@@ -37,4 +37,6 @@ if (!('/' in pages)) {
   }
 }
 
-export default routes;
+const useRoutesConfig = () => routes;
+
+export default useRoutesConfig;
